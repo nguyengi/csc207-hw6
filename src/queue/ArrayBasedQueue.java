@@ -185,7 +185,6 @@ class ArrayBasedQueueIterator<T> implements Iterator<T> {
 
 	@Override
 	public boolean hasNext() {
-//		System.out.println("index = " + index + ", back = " + q.back());
 		if (!calledNext && q.back() == q.front && q.front == index)
 			return true;
 		return !((index != 0 && index == q.back())
